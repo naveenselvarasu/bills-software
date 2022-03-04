@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<hr>
+<style>
+    table,th,td{border:2px solid black}
+</style>
+<table style="width:100%;">
+    <tr>
+        <th>S.No</th>
+        <th>Name of Product</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Discount Price</th>
+        <th>Total</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    <tr>
+        {% for form in form %}
+        <td>{{form.id}}</td>
+        <td>{{form.Name_of_Product}}</td>
+        <td>{{form.Price}}</td>
+        <td>{{form.Discount}} %</td>
+        <td>{{form.get_sale}}</td>
+        <td>{{form.get_total}}</td>
+        <td style="text-align:center"><a href="/update/{{form.id}}">Update</a> </td>
+        <td style="text-align:center"><a href="/Delete/{{form.id}}">Delete</a> </td>
+    </tr>
+    {% endfor %}
+</table><br>
+<button type="button"><a href="/AddNew">AddNew</a> </button>
+
+{% endblock %}
