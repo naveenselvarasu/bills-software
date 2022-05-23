@@ -5,10 +5,13 @@
 <style>
     table,th,td{border:2px solid black}
 </style>
+<strong> Search </strong><input type="search" ><br><br>
 <table style="width:100%;">
     <tr>
+        <th>Select</th>
         <th>S.No</th>
         <th>Name of Product</th>
+        <th>kg/Quantity</th>
         <th>Price</th>
         <th>Discount</th>
         <th>Discount Price</th>
@@ -18,8 +21,10 @@
     </tr>
     <tr>
         {% for form in form %}
+        <td> <input type="radio"> </td>
         <td>{{form.id}}</td>
         <td>{{form.Name_of_Product}}</td>
+        <td>{{form.kg}}</td>
         <td>{{form.Price}}</td>
         <td>{{form.Discount}} %</td>
         <td>{{form.get_sale}}</td>

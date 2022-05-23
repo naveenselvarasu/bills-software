@@ -5,7 +5,7 @@ from .models import Store_add
 
 
 class data(admin.ModelAdmin):
-    list = ["s_no", "data", "type_of_expenditure", "cost"]
+    list = ["s_no", "data", "type_of_expenditure", "cost","kg"]
 
 
 admin.site.register(Store_add, data)

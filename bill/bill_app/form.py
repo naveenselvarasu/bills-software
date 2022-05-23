@@ -5,5 +5,5 @@ from django import forms
 class data(forms.ModelForm):
     class Meta:
         model = Store_add
-        fields = ['Name_of_Product', 'Price', 'Discount']
+        fields = ['Name_of_Product', 'Price', 'Discount','kg']
 

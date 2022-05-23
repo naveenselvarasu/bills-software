@@ -1,15 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <form method="post">
-<!--{% for forms in form %}-->
-<!--        id :{{forms.id}}<br>-->
-<!--        name:{{forms.Name_of_Product}}-->
-<!--        {{form.Price}}-->
-<!--        {{form.Discount}}-->
-<!--        {{form.get_sale}}-->
-<!--        {{form.get_total}}-->
+{% for forms in form %}
 {% csrf_token %}
-{{ form.as_p }}
+        {{ form.as_p }}
         <input type="submit" value="update">
 </form>
 {% endfor %}

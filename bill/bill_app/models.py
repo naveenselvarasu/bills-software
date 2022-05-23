@@ -5,8 +5,10 @@ from django.db import models
 
 class Store_add(models.Model):
     Name_of_Product = models.CharField(max_length=100)
+    kg = models.DecimalField(max_digits=10, decimal_places=3)
     Price = models.BigIntegerField()
     Discount = models.DecimalField(max_digits=10, decimal_places=3)
+
 
 
     def get_sale(self):
